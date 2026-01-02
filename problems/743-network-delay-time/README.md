@@ -52,7 +52,6 @@ This solution uses **Dijkstra's Algorithm** to find the shortest path from the s
 
 ### Time Complexity
 - **O(n² + E)** where n is the number of nodes and E is the number of edges
-- With a priority queue optimization, this could be improved to **O((n + E) log n)**
 
 ### Space Complexity
 - **O(n + E)** for the adjacency list and auxiliary data structures
@@ -62,4 +61,3 @@ This solution uses **Dijkstra's Algorithm** to find the shortest path from the s
 - Graph
 - Shortest Path
 - Dijkstra's Algorithm
-- Heap (Priority Queue)
