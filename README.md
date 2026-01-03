@@ -18,9 +18,10 @@ problems/
 
 | # | Title | Difficulty | Topics | Solution |
 |---|-------|------------|--------|----------|
+| 100 | [Same Tree](./problems/100-same-tree) | Easy | Tree, BFS | [Python](./problems/100-same-tree/solution.py) |
 | 743 | [Network Delay Time](./problems/743-network-delay-time) | Medium | Graph, Dijkstra, Heap | [Python](./problems/743-network-delay-time/solution.py) |
 
-**Stats:** 1 solved • 0 Easy • 1 Medium • 0 Hard
+**Stats:** 2 solved • 1 Easy • 1 Medium • 0 Hard
 
 ---
 
