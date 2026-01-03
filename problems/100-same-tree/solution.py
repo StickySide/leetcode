@@ -1,5 +1,4 @@
 from __future__ import annotations
-from typing import Optional
 from collections import deque
 
 
@@ -12,13 +11,13 @@ class TreeNode:
 
 
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+    def isSameTree(self, p: TreeNode | None, q: TreeNode | None) -> bool:
         """Check if two binary trees are identical using BFS traversal."""
 
-        def traverse(n: Optional[TreeNode]) -> list[int | None]:
+        def traverse(n: TreeNode | None) -> list[int | None]:
             """Serialize tree to list with None for missing nodes."""
             tree: list[int | None] = []
-            queue: deque[Optional[TreeNode]] = deque([n])
+            queue: deque[TreeNode | None] = deque([n])
 
             while queue:
                 node = queue.popleft()
