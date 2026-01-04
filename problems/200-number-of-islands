@@ -1,0 +1,58 @@
+from collections import deque
+
+grid1: list[list[str]] = [
+    ["1", "1", "1", "1", "0"],
+    ["1", "1", "0", "1", "0"],
+    ["1", "1", "0", "0", "0"],
+    ["0", "0", "0", "0", "0"],
+]
+
+grid2: list[list[str]] = [
+    ["1", "1", "0", "0", "0"],
+    ["1", "1", "0", "0", "0"],
+    ["0", "0", "1", "0", "0"],
+    ["0", "0", "0", "1", "1"],
+]
+
+
+def nieghbors(coord: tuple[int, int]) -> list[tuple[int, int]]:
+    nbrs: list[tuple[int, int]] = []
+    x, y = coord
+    nbrs.append((x + 1, y + 0))
+    nbrs.append((x + 0, y + 1))
+    nbrs.append((x - 1, y + 0))
+    nbrs.append((x + 0, y - 1))
+    return nbrs
+
+
+def search_island(grid: list[list[str]], x: int, y: int, searched: set[tuple[int, int]]):
+    q: deque[tuple[int, int]] = deque([(x, y)])
+
+    while q:
+        cell = q.popleft()
+
+        for nbr in nieghbors(cell):
+            x, y = nbr
+            try:
+                if grid[y][x] == "1" and cell not in searched:
+                    q.append(nbr)
+            except IndexError:
+                continue
+
+        searched.add(cell)
+
+
+def solve(grid: list[list[str]]):
+    islands_count: int = 0
+    searched: set[tuple[int, int]] = set()
+
+    for y in range(len(grid)):
+        for x in range(len(grid[0])):
+            if grid[y][x] == "1" and (x, y) not in searched:
+                search_island(grid, x, y, searched)
+                islands_count += 1
+
+    return islands_count
+
+
+print(solve(grid2))
