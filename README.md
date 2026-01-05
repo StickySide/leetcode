@@ -18,7 +18,7 @@ problems/
 
 | # | Title | Difficulty | Topics | Solution |
 |---|-------|------------|--------|----------|
-| 100 | [Same Tree](./problems/100-same-tree) | Easy | Tree, BFS | [Python](./problems/100-same-tree/solution.py) |
+| 100 | [Same Tree](./problems/100-same-tree) | Easy | Tree, BFS, Recursion | [Python](./problems/100-same-tree/solution.py) |
 | 104 | [Maximum Depth of Binary Tree](./problems/104-maximum-depth-of-binary-tree) | Easy | Tree, DFS, Recursion | [Python](./problems/104-maximum-depth-of-binary-tree/solution.py) |
 | 133 | [Clone Graph](./problems/133-clone-graph) | Medium | Graph, DFS, Hash Map | [Python](./problems/133-clone-graph/solution.py) |
 | 200 | [Number of Islands](./problems/200-number-of-islands) | Medium | Graph, DFS, BFS | [Python](./problems/200-number-of-islands/recursive_solution.py) |
